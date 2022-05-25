@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap" rel="stylesheet">    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1">
+    <title>Document</title>
+   <script>
+     window.onload = function(){
+       let butm = document.getElementById('movies');
+       let butg = document.getElementById('games');
+
+       let mo = document.querySelector(".movie");
+       let int = document.querySelector(".intro");
+       let gam =document.querySelector(".game");
+        
+       butm.addEventListener('click',function(){
+           mo.style.display = 'block';
+           int.style.display = 'none';
+           gam.style.display = 'none';
+           document.body.style.backgroundImage='url(purple.jpg)'
+          
+        });
+
+        butg.addEventListener('click',function(){
+           mo.style.display = 'none';
+           int.style.display = 'none';
+           gam.style.display = 'block';
+           document.body.style.backgroundImage='url(skyblue.jpg)'
+        });
+
+     }
+   </script>
+   <style>
+        html{
+            font-family: 'Noto Sans KR', sans-serif;        
+        }
+        body{
+            margin: 0;
+            background-image:url("blackback.jpg");
+            background-size: 100% 180px;
+            background-repeat: no-repeat;
+            
+        }
+        .nav{ width: 100%; height: 50px; text-align: left;}
+        .intro{width: 100%; height: 900px;}
+        #divmenu{display: inline-block; float: left; text-decoration: none; font-size: large;}
+        a{ float: left; line-height: 50px; padding-left: 5px; padding-right: 5px;
+            text-decoration: none; color: white;
+        }
+        .ta{
+            margin-top: 80px;
+          
+        }
+        a:hover{color: purple;}
+        .intro{
+            text-align: center;
+        }
+            img{width: 250px; height: 350px;}
+       
+        #mymy{
+            float: left;
+            display:inline-block;
+           
+        }
+        .avenger{
+            display:inline-block;
+            float: left;
+            width: 30%; height: 200px;
+            border-radius: 5px;
+        }
+       .gameinfo{
+           position: relative;
+           text-align: center;
+           margin-bottom: 60px;
+       }
+        .gameimg{
+            width: 700px;
+            height: 200px;
+        }
+        .gminfo{
+            text-align: center;
+            z-index: 1;
+             position: absolute; color: white;
+            font-size: 30px;
+           left: 50%;
+          margin-left: -150px;
+           top: 20px;
+            width: 300px;
+        }
+        .myopinion{
+            position: absolute;
+            left: 50%;
+            margin-left: -200px;
+            z-index: 1;
+            bottom: -50px;
+            width: 400px;
+            font-size: 18px;
+            border-radius: 9px;
+        }
+
+        @media screen and (max-width:500px) {
+            body{
+                background-size: 100% 220px
+            };
+            
+            .nav{ width: 100%; height: 50px; }
+            .intro{width: 100%; height: 900px;
+           }
+           .ta{
+            text-align: center;
+           }
+            #mymy{
+                display: block;
+                float: none;
+                width: 100%;
+            }
+           .firstp{
+                margin-top: 0px;
+            }
+            a{float: left; width: 100%; color: white;}
+            #divmenu{float: left; display: block;}
+            .avenger{
+                display: block;
+                width: 100%;
+            }
+            .moviesector{
+            margin-bottom: 200px;
+            }
+            .myopinion{
+                position: relative;
+                left: 0%;
+                margin-left: 0px;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+<div class="nav">
+    <a id="divmenu" href="int.html">About me   </a>
+    <a id="movies"> 감명깊게본 영화 소개   </a>
+    <a id="games">좋아하는 게임    </a>
+</div>
+<div class="intro">
+    <h2 style="color:white;">나에 대하여</h2>
+   <div class="ta"style="display:inline-block;">
+        
+        <img id="mymy" src="./myface.jpg">
+        <br>
+        <br>
+        <br>
+           <p  style="display:inline-block; width: 50%;"><b>나의취미 </b>: 집앞 양재천 산책하기, 친구들과 통화하면서 게임하기, 영화관가서 영화보기, 탁구치기</p>
+         
+           <p style="display:inline-block; width: 50%;"><b>나의 특기</b> : 화안내고 긍정적으로 생각하기, 돈까스만 일주일내내먹기, 웹프로그래밍과목 복습하기</p>
+       
+           <p style="display:inline-block; width: 50%;"><b>나의 꿈</b> : 좋은아빠, 친구같은 아빠가 되는것, 화려하진않더라도 은은한 인생을 살기</p>
+        
+    
+</div> 
+</div>
+    
+<div class="movie" style="display:none;">
+<h2 style="text-align:center; color: white;">감명 깊었던 영화들</h2>
+<br><br><br><br><br>
+
+<div class="moviesector" style="height: 200px; width: 100%; "> 
+<img class="avenger" src="어벤져스1.jpg">
+<p style="display: inline-block; margin-left: 20px;"><b>어벤져스1</b></p>
+<br><br>
+<span style="width:60%; display: inline-block; padding-left: 20px;"> 내가 처음으로 영화관에 영화를보러가는것에 매력을 알려준영화 나를 본격적으로 마블영화를 보게 만들었다.
+지금봐도 시각적인 효과가 뛰어나다.</span>
+</div>
+<br>
+<div class="moviesector" style="height: 200px; width: 100%; "> 
+    <img class="avenger" src="엔드게임.jpg">
+    <p style="display: inline-block; margin-left: 20px;"><b>엔드게임</b></p>
+    <br><br>
+    <span style="width:60%; display: inline-block; padding-left: 20px;">영화관에서본 두번쨰 마블시리즈이다. 마블시리즈중 개인적으로 가장재미있고 히어로,sf영화 장르중에 여운이 가장 많이남았던영화이다.</span>
+</div>
+
+<div class="moviesector" style="height: 200px; width: 100%; "> 
+    <img class="avenger" src="catch me.jpg">
+    <p style="display: inline-block; margin-left: 20px;"><b>캐치 미 이프 유 캔(catch me if you can)</b></p>
+    <br><br>
+    <span style="width:60%; display: inline-block; padding-left: 20px;"> 볼영화가 없어 이런저런영화들을 찾아다니면서 보다가 찾게된 영화로 처음까지만해도 그저 실화를 바탕으로한 사기꾼이 나오는 오락영화정도로 치부했지만
+    뛰어난 능력의 주인공을 보며 대리만족감도 느꼇지만 가정상황으로 인해 그 능력이 나쁜일에 쓰이는것을 보며 평범한 내 일상에 소중함을 느낄수있었다. </span>
+
+</div>
+</div>
+
+<div class="game" style="display:none;">
+    <h2 style="text-align:center; color: white;">내가 좋아하는 게임들</h2>
+    <br><br><br><br><br>
+<div class=" gameinfo">
+    <img class="gameimg" src="lostark.jpg">
+    <span class="gminfo" ><b>Lost Ark</b></span>
+    <span class="myopinion" style="background-color:white">로스트아크는 군 전역후 한학기동안 제주도에있던 나를 심심하지 않게 해주던 게임이다. RPG게임으로 국내에서 가장 인기가많다.</span>
+</div>
+
+<div class=" gameinfo">
+    <img class="gameimg" src="lol.jpg">
+    <span class="gminfo" ><b></b></span>
+    <span class="myopinion" style="background-color:white">우리나라에서 이게임모르면 간첩이라는 소리를 들을정도로 유명한게임이다. 나 또한 학창시절에 리그오브레전드에 심취하여  pc방에 들락날락 거리는 것이 일상이었을정도로 국민게임이다 .</span>
+</div>
+
+<div class=" gameinfo" style="margin-bottom: 80px">
+    <img class="gameimg" src="starcraft.jpg">
+    <span class="gminfo" ><b></b></span>
+    <span class="myopinion" style="background-color:white">시대를 주름잡던 게임으로, 철없던 초등학교시절 아버지의 옛날 게임cd를 빌려 하던 게임이다 그 당시 게임실력으론 캄퓨터 봇하나 이기지 못했었던걸로 기억한다. 이 게임 또한 국민게임이다 </span>
+</div>
+</div>
+</body>
+</html>
